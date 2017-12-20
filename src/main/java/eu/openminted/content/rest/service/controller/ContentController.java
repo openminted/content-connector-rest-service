@@ -28,7 +28,7 @@ public class ContentController {
     ContentConnector contentConnector;
 
     @RequestMapping(method = POST, value = "/search")
-    public SearchResult search(@RequestBody Query query) {
+    public SearchResult search(@RequestBody Query query) throws IOException {
 
         return contentConnector.search(query);
     }
